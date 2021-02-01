@@ -35,7 +35,10 @@ public class PlayerController : MonoBehaviour
     //Update is called once per frame.
     void Update()
     {
+        if (!PlayerManger.isGameStarted) {
 
+            return;
+        }
         //Set the z axis to the forwardspeed.
         direction.z = forwardSpeed;
 
@@ -82,12 +85,21 @@ public class PlayerController : MonoBehaviour
 
         
         transform.position = targetPosition;
+
+
+        //Fix olayer going through obstacles.
       
 
     }
 
     private void FixedUpdate()
     {
+
+        if (!PlayerManger.isGameStarted)
+        {
+
+            return;
+        }
         //The interval in seconds at which physics 
         //and other fixed frame rate updates (like MonoBehaviour's FixedUpdate) are performed.
         controller.Move(direction * Time.fixedDeltaTime);
