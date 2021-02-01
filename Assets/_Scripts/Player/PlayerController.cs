@@ -82,6 +82,7 @@ public class PlayerController : MonoBehaviour
 
         
         transform.position = targetPosition;
+      
 
     }
 
@@ -97,5 +98,15 @@ public class PlayerController : MonoBehaviour
 
         direction.y = jumpForce;
     
+    }
+
+    //Check if it collid with tags with the name obstacles.
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if (hit.transform.tag == "Obstacles") {
+
+            PlayerManger.gameOver = true;
+        
+        }
     }
 }
