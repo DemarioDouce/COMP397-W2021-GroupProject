@@ -20,6 +20,12 @@ public class PlayerController : MonoBehaviour
     //The distance between two lanes.
     private float laneDistance = 2.5f;
 
+    //Set jump force.
+    private float jumpForce = 10;
+
+    //Set gravity
+    private float gravity = -20;
+
     //Start is called before the first frame update.
     void Start()
     {
@@ -29,8 +35,25 @@ public class PlayerController : MonoBehaviour
     //Update is called once per frame.
     void Update()
     {
+
         //Set the z axis to the forwardspeed.
         direction.z = forwardSpeed;
+
+        //Check if the player is on the ground.
+        if (controller.isGrounded) {
+            direction.y = -1;
+            //Allow player to jump.
+            if (Input.GetKeyDown(KeyCode.UpArrow))
+            {
+
+                Jump();
+            }
+        } else if (!controller.isGrounded) {
+            //Affect the player by gravity.
+
+            direction.y += gravity * Time.deltaTime;
+        }
+
 
         //Get input on which lane we should be.
         if (Input.GetKeyDown(KeyCode.RightArrow)) {
@@ -67,5 +90,12 @@ public class PlayerController : MonoBehaviour
         //The interval in seconds at which physics 
         //and other fixed frame rate updates (like MonoBehaviour's FixedUpdate) are performed.
         controller.Move(direction * Time.fixedDeltaTime);
+    }
+
+    //Allow player to jump.
+    private void Jump() {
+
+        direction.y = jumpForce;
+    
     }
 }
