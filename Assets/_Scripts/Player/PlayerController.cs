@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
     private int desiredLane = 1; // 1 = Middle lane. 0 - Left lane. 2 - Right lane.
 
     //The distance between two lanes.
-    private float laneDistance = 2.5f;
+    private float laneDistance = 3.0f;
 
     //Set jump force.
     private float jumpForce = 10;
