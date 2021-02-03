@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3392226}
   - component: {fileID: 2392226}
   - component: {fileID: 6592226}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 492228}
   - component: {fileID: 3392228}
   - component: {fileID: 2392228}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Fence
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -185,7 +185,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 492230}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ground02
   m_TagString: Untagged
   m_Icon: {fileID: 0}

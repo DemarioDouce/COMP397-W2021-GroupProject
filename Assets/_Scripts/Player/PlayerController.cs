@@ -26,6 +26,9 @@ public class PlayerController : MonoBehaviour
     //Set gravity
     private float gravity = -20;
 
+    //Ref for animator.
+    public Animator animator;
+
     //Start is called before the first frame update.
     void Start()
     {
@@ -39,20 +42,21 @@ public class PlayerController : MonoBehaviour
 
             return;
         }
+        animator.SetBool("isGameStarted",true);
         //Set the z axis to the forwardspeed.
         direction.z = forwardSpeed;
-
         //Check if the player is on the ground.
         if (controller.isGrounded) {
             direction.y = -1;
             //Allow player to jump.
             if (Input.GetKeyDown(KeyCode.UpArrow))
             {
-
+                animator.SetBool("isGrounded", true);
                 Jump();
             }
         } else if (!controller.isGrounded) {
             //Affect the player by gravity.
+            animator.SetBool("isGrounded",false);
 
             direction.y += gravity * Time.deltaTime;
         }
