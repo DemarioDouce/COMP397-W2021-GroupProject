@@ -38,7 +38,7 @@ public class PlayerManger : MonoBehaviour
         coinsText.text = "Coins: " +numberofCoins;
 
         //Starts the game.
-        if (Input.GetKeyDown(KeyCode.UpArrow)) {
+        if (Input.GetKeyDown(KeyCode.Space)) {
 
             isGameStarted = true;
             Destroy(startingText);
