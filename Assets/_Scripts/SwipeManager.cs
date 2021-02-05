@@ -1,3 +1,7 @@
+/*
+ * DO NOT USE YET.
+ */
+
 using UnityEngine;
 
 public class SwipeManager : MonoBehaviour

@@ -27,12 +27,17 @@ public class PlayerManger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Deals with the game over panel.
         if (gameOver) {
 
             Time.timeScale = 0;
             gameOverPanel.SetActive(true);
         }
+
+        //Keep track of the coin count.
         coinsText.text = "Coins: " +numberofCoins;
+
+        //Starts the game.
         if (Input.GetKeyDown(KeyCode.UpArrow)) {
 
             isGameStarted = true;

@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class Events : MonoBehaviour
 {
+
+    //Deals with the game over panel button click functions.
+
     public void ReplayGame()
     {
         SceneManager.LoadScene("Level");
