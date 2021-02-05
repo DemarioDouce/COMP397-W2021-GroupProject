@@ -138,7 +138,7 @@ public class PlayerController : MonoBehaviour
     //Check if it collid with tags with the name obstacles.
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        if (hit.transform.tag == "Obstacles") {
+        if (hit.transform.tag == "Obstacle") {
 
             PlayerManger.gameOver = true;
             FindObjectOfType<AudioManager>().PlaySound("GameOver");
