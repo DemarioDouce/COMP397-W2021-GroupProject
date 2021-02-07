@@ -142,6 +142,7 @@ public class PlayerController : MonoBehaviour
 
            PlayerManger.numberofLifes -= 1;
             FindObjectOfType<AudioManager>().PlaySound("Life hit");
+            Destroy(hit.gameObject);
 
 
             if (PlayerManger.numberofLifes == 0) {
