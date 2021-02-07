@@ -730,7 +730,7 @@ GameObject:
   - component: {fileID: 654921202}
   - component: {fileID: 654921201}
   m_Layer: 5
-  m_Name: Text
+  m_Name: gameOverText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1604,6 +1604,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOverPanel: {fileID: 6302650}
   startingText: {fileID: 1638223286}
+  gameOverText: {fileID: 654921199}
   coinsText: {fileID: 307571831}
   lifeText: {fileID: 1709682349}
 --- !u!4 &1234232601

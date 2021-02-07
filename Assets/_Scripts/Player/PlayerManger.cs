@@ -9,6 +9,7 @@ public class PlayerManger : MonoBehaviour
     public GameObject gameOverPanel;
     public static bool isGameStarted;
     public GameObject startingText;
+    public GameObject gameOverText;
 
     //Keep track of coins
     public static int numberofCoins;

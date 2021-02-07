@@ -23,6 +23,7 @@ public class GamePlayPanel : MonoBehaviour
         if (PlayerManger.isGameStarted == true)
         {
             GameplayPanelBg.SetActive(true);
+
         }
         if (PlayerManger.gameOver == true) {
             GameplayPanelBg.SetActive(false);
