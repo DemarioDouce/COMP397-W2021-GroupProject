@@ -15,6 +15,11 @@ public class PlayerManger : MonoBehaviour
     //Ref of the text for coins
     public Text coinsText;
 
+    //Keep track of players life
+    public static int numberofLifes = 3;
+    //Ref of the text for life
+    public Text lifeText;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +27,7 @@ public class PlayerManger : MonoBehaviour
         Time.timeScale = 1;
         isGameStarted = false;
         numberofCoins = 0;
+        numberofLifes = 3;
     }
 
     // Update is called once per frame
@@ -36,6 +42,9 @@ public class PlayerManger : MonoBehaviour
 
         //Keep track of the coin count.
         coinsText.text = "Coins: " +numberofCoins;
+
+        //Keep track of the life count.
+        lifeText.text = "Lifes: " + numberofLifes;
 
         //Starts the game.
         if (Input.GetKeyDown(KeyCode.Space)) {

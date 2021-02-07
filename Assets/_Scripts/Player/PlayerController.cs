@@ -140,8 +140,13 @@ public class PlayerController : MonoBehaviour
     {
         if (hit.transform.tag == "Obstacle") {
 
-            PlayerManger.gameOver = true;
-            FindObjectOfType<AudioManager>().PlaySound("GameOver");
+            PlayerManger.numberofLifes -= 1;
+                FindObjectOfType<AudioManager>().PlaySound("Life hit");
+            if (PlayerManger.numberofLifes == 0) {
+                PlayerManger.gameOver = true;
+                FindObjectOfType<AudioManager>().PlaySound("GameOver");
+            }
+
         
         }
     }

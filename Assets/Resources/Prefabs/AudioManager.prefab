@@ -46,16 +46,21 @@ MonoBehaviour:
   sounds:
   - name: GamePlay
     clip: {fileID: 8300000, guid: 1f4072636ad55a641b6fd0c4431045dc, type: 3}
-    volume: 0.2
+    volume: 0.1
     loop: 1
     source: {fileID: 0}
   - name: PickUpCoin
     clip: {fileID: 8300000, guid: 9c32c127fa4b08341a70274abafa6328, type: 3}
-    volume: 0.3
+    volume: 0.1
     loop: 0
     source: {fileID: 0}
   - name: GameOver
     clip: {fileID: 8300000, guid: bc05df86d10f5a545ae62a6011ab742f, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: ButtenClick
+    clip: {fileID: 8300000, guid: 50e5ede97a5eab14b9b13e63039de8ae, type: 3}
     volume: 1
     loop: 0
     source: {fileID: 0}

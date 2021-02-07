@@ -1359,6 +1359,7 @@ MonoBehaviour:
   gameOverPanel: {fileID: 6302650}
   startingText: {fileID: 1638223286}
   coinsText: {fileID: 307571831}
+  lifeText: {fileID: 1709682349}
 --- !u!4 &1234232601
 Transform:
   m_ObjectHideFlags: 0
@@ -1847,7 +1848,7 @@ GameObject:
   - component: {fileID: 1709682350}
   - component: {fileID: 1709682349}
   m_Layer: 5
-  m_Name: HealthText
+  m_Name: LifeText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2177,11 +2178,19 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4911732651683349354, guid: ca7c5cd5b5217f344b65ffbca31e91e9, type: 3}
-      propertyPath: sounds.Array.data[0].volume
+      propertyPath: sounds.Array.data[4].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 136b8263e3f22af4e9d2c8f84d7fce1a, type: 3}
+    - target: {fileID: 4911732651683349354, guid: ca7c5cd5b5217f344b65ffbca31e91e9, type: 3}
+      propertyPath: sounds.Array.data[4].name
+      value: Life hit
+      objectReference: {fileID: 0}
+    - target: {fileID: 4911732651683349354, guid: ca7c5cd5b5217f344b65ffbca31e91e9, type: 3}
+      propertyPath: sounds.Array.data[2].volume
       value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 4911732651683349354, guid: ca7c5cd5b5217f344b65ffbca31e91e9, type: 3}
-      propertyPath: sounds.Array.data[1].volume
+      propertyPath: sounds.Array.data[4].volume
       value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 4911732651683349355, guid: ca7c5cd5b5217f344b65ffbca31e91e9, type: 3}
