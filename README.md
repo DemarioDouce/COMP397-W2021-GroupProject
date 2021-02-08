@@ -1,5 +1,5 @@
 # COMP397-W2021-GroupProject
-## Lab project
+## Group project
 ---
 The player takes control of a wheel that goes down a road in an endless run. This run 
 can end either if the wheel hits one of the road works barriers or traffic cones.
