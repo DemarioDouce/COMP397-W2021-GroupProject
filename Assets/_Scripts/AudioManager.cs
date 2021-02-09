@@ -44,7 +44,7 @@ public class AudioManager : MonoBehaviour
         foreach (Sound s in sounds)
         {
 
-            s.volume = volumeSlider.value;
+            s.source.volume = volumeSlider.value;
 
         }
 
