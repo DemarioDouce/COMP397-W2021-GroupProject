@@ -43,6 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90d0704434ea6874788590567f20ed70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volumeSlider: {fileID: 0}
   sounds:
   - name: GamePlay
     clip: {fileID: 8300000, guid: 1f4072636ad55a641b6fd0c4431045dc, type: 3}

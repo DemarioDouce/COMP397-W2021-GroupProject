@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
 {
+    //Ref slider
+    public Slider volumeSlider;
     public Sound[] sounds;
     // Start is called before the first frame update
     void Start()
@@ -29,6 +32,19 @@ public class AudioManager : MonoBehaviour
                 s.source.Play();
             
             }
+
+        }
+
+    }
+
+    //Control volume using slider.
+    public void Volume()
+    {
+
+        foreach (Sound s in sounds)
+        {
+
+            s.volume = volumeSlider.value;
 
         }
 
