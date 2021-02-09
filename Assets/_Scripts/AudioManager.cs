@@ -45,6 +45,7 @@ public class AudioManager : MonoBehaviour
         {
 
             s.source.volume = volumeSlider.value;
+            s.volume = volumeSlider.value;
 
         }
 
