@@ -25,6 +25,11 @@ public class OptionsMenu : MonoBehaviour
         rightArrowKey = KeyCode.RightArrow;
     }
 
+     void Update()
+    {
+        UpArrowDropdown();
+    }
+
     //Control volume using slider.
     public void Volume()
     {
@@ -33,9 +38,10 @@ public class OptionsMenu : MonoBehaviour
 
     }
 
+    
     //Control up arrow dropdown.
     public void UpArrowDropdown() {
-        if (upArrowDdn.options[0].text == "A") {
+        if (upArrowDdn.options[1].text == "A") {
 
             upArrowKey = KeyCode.A;
         }
