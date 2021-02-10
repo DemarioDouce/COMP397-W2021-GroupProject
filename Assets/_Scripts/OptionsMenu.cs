@@ -41,9 +41,30 @@ public class OptionsMenu : MonoBehaviour
     
     //Control up arrow dropdown.
     public void UpArrowDropdown() {
-        if (upArrowDdn.options[1].text == "A") {
+        if (upArrowDdn.value == 1)
+        {
 
             upArrowKey = KeyCode.A;
+            
+        }
+        else if (upArrowDdn.value == 2)
+        {
+
+            upArrowKey = KeyCode.B;
+            Debug.Log("B");
+        }
+        else if (upArrowDdn.value == 3)
+        {
+
+            upArrowKey = KeyCode.C;
+        }
+        else if (upArrowDdn.value == 4)
+        {
+            upArrowKey = KeyCode.D;
+        }
+        else {
+
+            upArrowKey = KeyCode.UpArrow;
         }
     }
 }

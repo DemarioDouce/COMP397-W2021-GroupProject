@@ -2365,6 +2365,10 @@ MonoBehaviour:
       m_Image: {fileID: 0}
     - m_Text: B
       m_Image: {fileID: 0}
+    - m_Text: C
+      m_Image: {fileID: 0}
+    - m_Text: D
+      m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
