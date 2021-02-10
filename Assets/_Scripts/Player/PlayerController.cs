@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 direction;
 
     //How fast the player will move forward.
-    private float forwardSpeed = 10;
+    public static float forwardSpeed = 10;
     //Max speed
     private float maxSpeed = 15;
 
