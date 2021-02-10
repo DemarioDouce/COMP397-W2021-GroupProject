@@ -7,12 +7,22 @@ public class OptionsMenu : MonoBehaviour
 {
     //Ref slider
     public Slider volumeSlider;
+    //Ref up arrow drop down.
+    public Dropdown upArrowDdn;
+    public static KeyCode upArrowKey;
+    public static KeyCode downArrowKey;
+    public static KeyCode leftArrowKey;
+    public static KeyCode rightArrowKey;
     public static float volume;
 
      void Start()
     {
         volume = 0.68F;
         volumeSlider.value = volume;
+        upArrowKey = KeyCode.UpArrow;
+        downArrowKey = KeyCode.DownArrow;
+        leftArrowKey = KeyCode.LeftArrow;
+        rightArrowKey = KeyCode.RightArrow;
     }
 
     //Control volume using slider.
@@ -21,5 +31,13 @@ public class OptionsMenu : MonoBehaviour
 
         volume = volumeSlider.value;
 
+    }
+
+    //Control up arrow dropdown.
+    public void UpArrowDropdown() {
+        if (upArrowDdn.options[0].text == "A") {
+
+            upArrowKey = KeyCode.A;
+        }
     }
 }

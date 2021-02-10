@@ -64,7 +64,7 @@ public class PlayerController : MonoBehaviour
         if (controller.isGrounded) {
             direction.y = -1;
             //Allow player to jump.
-            if (Input.GetKeyDown(KeyCode.UpArrow))
+            if (Input.GetKeyDown(OptionsMenu.upArrowKey))
             {
                 animator.SetBool("isGrounded", false);
                 Jump();
@@ -76,19 +76,19 @@ public class PlayerController : MonoBehaviour
             direction.y += gravity * Time.deltaTime;
         }
 
-        if (Input.GetKeyDown(KeyCode.DownArrow) && !isSliding) {
+        if (Input.GetKeyDown(OptionsMenu.downArrowKey) && !isSliding) {
 
             StartCoroutine(Slide());
         }
 
         //Get input on which lane we should be.
-        if (Input.GetKeyDown(KeyCode.RightArrow)) {
+        if (Input.GetKeyDown(OptionsMenu.rightArrowKey)) {
             desiredLane++;
             if (desiredLane == 3) {
                 desiredLane = 2;
             }
                 }
-        else if (Input.GetKeyDown(KeyCode.LeftArrow))
+        else if (Input.GetKeyDown(OptionsMenu.leftArrowKey))
         {
             desiredLane--;
             if (desiredLane == -1)
