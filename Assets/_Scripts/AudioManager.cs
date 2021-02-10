@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
 {
-    //Ref slider
-    public Slider volumeSlider;
+
+
     public Sound[] sounds;
     // Start is called before the first frame update
     void Start()
@@ -15,11 +15,11 @@ public class AudioManager : MonoBehaviour
 
           s.source =   gameObject.AddComponent<AudioSource>();
             s.source.clip = s.clip;
-            s.source.loop = s.loop;
-
+            s.source.loop = s.loop;      
         }
 
         PlaySound("GamePlay");
+        Volume();
     }
 
     public void PlaySound(string name) {
@@ -30,11 +30,17 @@ public class AudioManager : MonoBehaviour
             if (s.name == name) {
 
                 s.source.Play();
-            
+                s.source.volume = OptionsMenu.volume;
+
             }
 
         }
 
+    }
+
+     void Update()
+    {
+        Volume();
     }
 
     //Control volume using slider.
@@ -44,10 +50,10 @@ public class AudioManager : MonoBehaviour
         foreach (Sound s in sounds)
         {
 
-            s.source.volume = volumeSlider.value;
-            s.volume = volumeSlider.value;
+            s.source.volume =OptionsMenu.volume;
+            s.volume = OptionsMenu.volume;
 
         }
 
-    }
+    }    
 }

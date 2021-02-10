@@ -441,8 +441,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8300845567961682067}
-        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+      - m_Target: {fileID: 1289723070}
+        m_TargetAssemblyTypeName: OptionsMenu, Assembly-CSharp
         m_MethodName: Volume
         m_Mode: 1
         m_Arguments:
@@ -1759,6 +1759,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2013cb4c3d5148941829e4f7962068e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volumeSlider: {fileID: 330632033}
+  volume: 0
 --- !u!4 &1289723071
 Transform:
   m_ObjectHideFlags: 0

@@ -1,18 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class OptionsMenu : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    //Ref slider
+    public Slider volumeSlider;
+    public static float volume;
+
+     void Start()
     {
-        
+        volume = 0.68F;
+        volumeSlider.value = volume;
     }
 
-    // Update is called once per frame
-    void Update()
+    //Control volume using slider.
+    public void Volume()
     {
-        
+
+        volume = volumeSlider.value;
+
     }
 }
