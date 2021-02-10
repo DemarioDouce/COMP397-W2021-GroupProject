@@ -795,7 +795,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -60.767, y: -89}
+  m_AnchoredPosition: {x: -68.274994, y: -89}
   m_SizeDelta: {x: 153.9967, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &135798226
@@ -831,7 +831,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'LEFT ARROW:'
+  m_Text: 'RIGHT ARROW:'
 --- !u!222 &135798227
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5679,7 +5679,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1289723070}
         m_TargetAssemblyTypeName: OptionsMenu, Assembly-CSharp
-        m_MethodName: DownArrowDropdown
+        m_MethodName: LeftArrowDropdown
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6734,7 +6734,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1289723070}
         m_TargetAssemblyTypeName: OptionsMenu, Assembly-CSharp
-        m_MethodName: DownArrowDropdown
+        m_MethodName: RightArrowDropdown
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

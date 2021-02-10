@@ -34,6 +34,9 @@ public class OptionsMenu : MonoBehaviour
      void Update()
     {
         UpArrowDropdown();
+        DownArrowDropdown();
+        LeftArrowDropdown();
+        RightArrowDropdown();
     }
 
     //Control volume using slider.
@@ -46,6 +49,7 @@ public class OptionsMenu : MonoBehaviour
 
     
     //Control up arrow dropdown.
+    //ABCD
     public void UpArrowDropdown() {
         if (upArrowDdn.value == 1)
         {
@@ -75,33 +79,98 @@ public class OptionsMenu : MonoBehaviour
     }
 
     //Control down arrow dropdown.
+    //EFGH
     public void DownArrowDropdown()
     {
-        if (upArrowDdn.value == 1)
+        if (downArrowDdn.value == 1)
         {
 
-            upArrowKey = KeyCode.A;
+            downArrowKey = KeyCode.E;
 
         }
-        else if (upArrowDdn.value == 2)
+        else if (downArrowDdn.value == 2)
         {
 
-            upArrowKey = KeyCode.B;
+            downArrowKey = KeyCode.F;
 
         }
-        else if (upArrowDdn.value == 3)
+        else if (downArrowDdn.value == 3)
         {
 
-            upArrowKey = KeyCode.C;
+            downArrowKey = KeyCode.G;
         }
-        else if (upArrowDdn.value == 4)
+        else if (downArrowDdn.value == 4)
         {
-            upArrowKey = KeyCode.D;
+            downArrowKey = KeyCode.H;
         }
         else
         {
 
-            upArrowKey = KeyCode.UpArrow;
+            downArrowKey = KeyCode.DownArrow;
+        }
+    }
+
+    //Control left arrow dropdown.
+    //IJKL MOPQ
+    public void LeftArrowDropdown()
+    {
+        if (leftArrowDdn.value == 1)
+        {
+
+            leftArrowKey = KeyCode.I;
+
+        }
+        else if (leftArrowDdn.value == 2)
+        {
+
+            leftArrowKey = KeyCode.J;
+
+        }
+        else if (leftArrowDdn.value == 3)
+        {
+
+            leftArrowKey = KeyCode.K;
+        }
+        else if (leftArrowDdn.value == 4)
+        {
+            leftArrowKey = KeyCode.L;
+        }
+        else
+        {
+
+            leftArrowKey = KeyCode.LeftArrow;
+        }
+    }
+
+    //Control right arrow dropdown.
+    //MOPQ
+    public void RightArrowDropdown()
+    {
+        if (rightArrowDdn.value == 1)
+        {
+
+            rightArrowKey = KeyCode.M;
+
+        }
+        else if (rightArrowDdn.value == 2)
+        {
+
+            rightArrowKey = KeyCode.O;
+
+        }
+        else if (rightArrowDdn.value == 3)
+        {
+
+            rightArrowKey = KeyCode.P;
+        }
+        else if (rightArrowDdn.value == 4)
+        {
+            rightArrowKey = KeyCode.Q;
+        }
+        else
+        {
+
+            rightArrowKey = KeyCode.RightArrow;
         }
     }
 }
