@@ -9,6 +9,12 @@ public class OptionsMenu : MonoBehaviour
     public Slider volumeSlider;
     //Ref up arrow drop down.
     public Dropdown upArrowDdn;
+    //Ref down arrow drop down.
+    public Dropdown downArrowDdn;
+    //Ref left arrow drop down.
+    public Dropdown leftArrowDdn;
+    //Ref right arrow drop down.
+    public Dropdown rightArrowDdn;
     public static KeyCode upArrowKey;
     public static KeyCode downArrowKey;
     public static KeyCode leftArrowKey;
@@ -51,7 +57,7 @@ public class OptionsMenu : MonoBehaviour
         {
 
             upArrowKey = KeyCode.B;
-            Debug.Log("B");
+          
         }
         else if (upArrowDdn.value == 3)
         {
@@ -63,6 +69,37 @@ public class OptionsMenu : MonoBehaviour
             upArrowKey = KeyCode.D;
         }
         else {
+
+            upArrowKey = KeyCode.UpArrow;
+        }
+    }
+
+    //Control down arrow dropdown.
+    public void DownArrowDropdown()
+    {
+        if (upArrowDdn.value == 1)
+        {
+
+            upArrowKey = KeyCode.A;
+
+        }
+        else if (upArrowDdn.value == 2)
+        {
+
+            upArrowKey = KeyCode.B;
+
+        }
+        else if (upArrowDdn.value == 3)
+        {
+
+            upArrowKey = KeyCode.C;
+        }
+        else if (upArrowDdn.value == 4)
+        {
+            upArrowKey = KeyCode.D;
+        }
+        else
+        {
 
             upArrowKey = KeyCode.UpArrow;
         }
