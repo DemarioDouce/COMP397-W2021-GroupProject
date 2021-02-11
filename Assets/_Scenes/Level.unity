@@ -1438,9 +1438,9 @@ MonoBehaviour:
   groundPrefabs:
   - {fileID: 193874, guid: 1731ae0548ad2ba458c572ab6df7b58c, type: 3}
   - {fileID: 193874, guid: 1731ae0548ad2ba458c572ab6df7b58c, type: 3}
-  - {fileID: 5981225014212177505, guid: 557eca762cadb45438db650599aca83c, type: 3}
   - {fileID: 193874, guid: 1731ae0548ad2ba458c572ab6df7b58c, type: 3}
-  - {fileID: 1120461543702005640, guid: 3adad007b63eaee419a0582309f05e30, type: 3}
+  - {fileID: 193874, guid: 1731ae0548ad2ba458c572ab6df7b58c, type: 3}
+  - {fileID: 193874, guid: 1731ae0548ad2ba458c572ab6df7b58c, type: 3}
   zSpawn: 0
   playerTransform: {fileID: 1608553385}
 --- !u!4 &978548451

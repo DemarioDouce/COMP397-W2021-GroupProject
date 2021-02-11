@@ -7,9 +7,10 @@ public class EnemyController : MonoBehaviour
     CharacterController _controller;
     Transform target;
     GameObject Player;
+    Vector3 movement;
 
 
-    float _moveSpeed = PlayerController.forwardSpeed -0.40F;
+    float _moveSpeed = PlayerController.forwardSpeed -0.01F;
 
 
     // Use this for initialization
@@ -19,8 +20,6 @@ public class EnemyController : MonoBehaviour
 
         Player = GameObject.FindWithTag("Player");
         target = Player.transform;
-
-
 
         _controller = GetComponent<CharacterController>();
 
@@ -40,11 +39,38 @@ public class EnemyController : MonoBehaviour
 
         direction = direction.normalized;
 
+        if (Player.transform.position.x == 3)
+        {
+            movement.x = direction.x;
+        }
+        else if (Player.transform.position.x == -3)
+        {
+
+            movement.x = direction.x;
+        }
+        else { movement.x = 0; }
+
+
+        
+
         Vector3 velocity = direction * _moveSpeed;
 
         _controller.Move(velocity * Time.deltaTime);
 
 
+    }
+
+    private void FixedUpdate()
+    {
+
+        if (!PlayerManger.isGameStarted)
+        {
+
+            return;
+        }
+        //The interval in seconds at which physics 
+        //and other fixed frame rate updates (like MonoBehaviour's FixedUpdate) are performed.
+        _controller.Move(movement);
     }
 
     //Check if it collid with tags with the name obstacles.
