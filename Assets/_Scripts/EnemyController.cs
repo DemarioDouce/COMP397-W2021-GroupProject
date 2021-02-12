@@ -10,7 +10,7 @@ public class EnemyController : MonoBehaviour
     Vector3 movement;
 
 
-    float _moveSpeed = PlayerController.forwardSpeed -0.01F;
+    float _moveSpeed = PlayerController.forwardSpeed -0.1F;
 
 
     // Use this for initialization
@@ -89,7 +89,7 @@ public class EnemyController : MonoBehaviour
         }
         else if (hit.transform.tag == "Player") {
 
-            PlayerManger.numberofLifes -= 1;
+            PlayerManger.numberofLifes = 0;
 
             if (PlayerManger.numberofLifes == 0)
             {

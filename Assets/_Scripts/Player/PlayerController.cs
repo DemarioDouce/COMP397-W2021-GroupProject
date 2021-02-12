@@ -146,6 +146,7 @@ public class PlayerController : MonoBehaviour
         if (hit.transform.tag == "Obstacle") {
 
            PlayerManger.numberofLifes -= 1;
+            forwardSpeed -= 0.1F * Time.deltaTime;
             FindObjectOfType<AudioManager>().PlaySound("Life hit");
             Destroy(hit.gameObject);
 
