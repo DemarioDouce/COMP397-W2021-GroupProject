@@ -23,7 +23,7 @@ public class OptionsMenu : MonoBehaviour
 
      void Start()
     {
-        volume = 0.68F;
+        volume = 0.30F;
         volumeSlider.value = volume;
         upArrowKey = KeyCode.UpArrow;
         downArrowKey = KeyCode.DownArrow;

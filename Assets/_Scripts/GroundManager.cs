@@ -31,6 +31,9 @@ public class GroundManager : MonoBehaviour
             if (i == 0)
             {
                 spawnGround(0);
+                spawnGround(0);
+                spawnGround(0);
+                spawnGround(0);
             } else {
 
                 spawnGround(Random.Range(0, groundPrefabs.Length));

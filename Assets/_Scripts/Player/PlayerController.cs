@@ -71,12 +71,12 @@ public class PlayerController : MonoBehaviour
             //Allow player to jump.
             if (Input.GetKeyDown(OptionsMenu.upArrowKey))
             {
-                animator.SetBool("isGrounded", false);
+                animator.SetBool("isGrounded", true);
                 Jump();
             }
         } else if (!controller.isGrounded) {
             //Affect the player by gravity.
-            animator.SetBool("isGrounded",true);
+            animator.SetBool("isGrounded",false);
 
             direction.y += gravity * Time.deltaTime;
         }
