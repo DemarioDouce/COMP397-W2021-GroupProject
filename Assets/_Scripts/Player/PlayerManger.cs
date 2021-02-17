@@ -16,12 +16,12 @@ public class PlayerManger : MonoBehaviour
     public GameObject gameOverText;
 
     //Keep track of coins
-    public static int numberofCoins;
+    public static int numberofCoins = 0;
     //Ref of the text for coins
     public Text coinsText;
 
     //Keep track of players life
-    public static int numberofLifes;
+    public static int numberofLifes = 3;
     //Ref of the text for life
     public Text lifeText;
 
@@ -31,8 +31,6 @@ public class PlayerManger : MonoBehaviour
         gameOver = false;
         Time.timeScale = 1;
         isGameStarted = false;
-        numberofCoins = 0;
-        numberofLifes = 3;
     }
 
     // Update is called once per frame

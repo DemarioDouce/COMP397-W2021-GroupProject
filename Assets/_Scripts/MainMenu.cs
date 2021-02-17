@@ -12,6 +12,8 @@ public class MainMenu : MonoBehaviour
     //Start the game method.
     public void NewGame() { 
         SceneManager.LoadScene("Level");
+        PlayerManger.numberofCoins = 0;
+        PlayerManger.numberofLifes = 3;
     }
 
     //Quit game.
@@ -29,8 +31,15 @@ public class MainMenu : MonoBehaviour
     //Load game 
     public void LoadGame()
     {
-        LoadGameCanvas.SetActive(true);
-        MainCanvas.SetActive(false);
+        SceneManager.LoadScene("Level");
+
+        PlayerData data = SaveSystem.LoadPlayer();
+
+
+        PlayerManger.numberofCoins = data.numberofCoins;
+        PlayerManger.numberofLifes = data.numberofLifes;
+        // LoadGameCanvas.SetActive(true);
+        // MainCanvas.SetActive(false);
     }
 
     //Go back
