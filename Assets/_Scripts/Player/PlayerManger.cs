@@ -65,7 +65,6 @@ public class PlayerManger : MonoBehaviour
     {
 
         SaveSystem.SavePlayer(this);
-
     }
 
     public void LoadPlayer()

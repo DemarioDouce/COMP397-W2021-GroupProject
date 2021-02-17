@@ -7,6 +7,11 @@ public class GamePlayPanel : MonoBehaviour
 {
     //Ref to gameplay panel bg
     public GameObject GameplayPanelBg;
+    //Ref to confirmationsave panel
+    public  GameObject ConfirmationSavePanel;
+
+    //Ref to confirmationload panel
+    public GameObject ConfirmationLoadPanel;
     //Ref to playPause Btn
     public Text playPauseBtnTxt;
 
@@ -15,6 +20,8 @@ public class GamePlayPanel : MonoBehaviour
     void Start()
     {
         GameplayPanelBg.SetActive(false);
+        ConfirmationSavePanel.SetActive(false);
+        ConfirmationLoadPanel.SetActive(false);
     }
 
     // Update is called once per frame
@@ -43,5 +50,44 @@ public class GamePlayPanel : MonoBehaviour
             playPauseBtnTxt.text = "PAUSE";
         }
         
+    }
+
+    public void Save() {
+
+        ConfirmationSavePanel.SetActive(true);
+        Time.timeScale = 0;
+    }
+
+    public void Load()
+    {
+
+        ConfirmationLoadPanel.SetActive(true);
+        Time.timeScale = 0;
+    }
+
+    public void NoSave() {
+
+        ConfirmationSavePanel.SetActive(false);
+        Time.timeScale = 1;
+    }
+
+    public void YesSave() {
+
+        ConfirmationSavePanel.SetActive(false);
+        Time.timeScale = 1;
+    }
+
+    public void NoLoad()
+    {
+
+        ConfirmationLoadPanel.SetActive(false);
+        Time.timeScale = 1;
+    }
+
+    public void YesLoad()
+    {
+
+        ConfirmationLoadPanel.SetActive(false);
+        Time.timeScale = 1;
     }
 }
