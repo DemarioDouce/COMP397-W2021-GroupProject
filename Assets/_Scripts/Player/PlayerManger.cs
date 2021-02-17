@@ -5,6 +5,10 @@ using UnityEngine.UI;
 
 public class PlayerManger : MonoBehaviour
 {
+    //Trial ref
+    public int numberofCoinsRef;
+    public int numberofLifesRef;
+
     public static bool gameOver;
     public GameObject gameOverPanel;
     public static bool isGameStarted;
@@ -17,7 +21,7 @@ public class PlayerManger : MonoBehaviour
     public Text coinsText;
 
     //Keep track of players life
-    public static int numberofLifes = 3;
+    public static int numberofLifes;
     //Ref of the text for life
     public Text lifeText;
 
@@ -34,6 +38,7 @@ public class PlayerManger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         //Deals with the game over panel.
         if (gameOver) {
 
@@ -47,11 +52,35 @@ public class PlayerManger : MonoBehaviour
         //Keep track of the life count.
         lifeText.text = "Lifes: " + numberofLifes;
 
+        //Ref
+        numberofCoinsRef = numberofCoins;
+        numberofLifesRef = numberofLifes;
         //Starts the game.
         if (Input.GetKeyDown(KeyCode.Space)) {
 
             isGameStarted = true;
             Destroy(startingText);
         }
+    }
+
+    public void SavePlayer()
+    {
+
+        SaveSystem.SavePlayer(this);
+
+    }
+
+    public void LoadPlayer()
+    {
+
+        PlayerData data = SaveSystem.LoadPlayer();
+
+        numberofCoins = data.numberofCoins;
+        numberofLifes = data.numberofLifes;
+
+        // PlayerController.direction.x = data.position[0];
+        // PlayerController.direction.y = data.position[1];
+        //  PlayerController.direction.z = data.position[2];
+
     }
 }

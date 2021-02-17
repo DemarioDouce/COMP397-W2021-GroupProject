@@ -23,6 +23,7 @@ public class Coin : MonoBehaviour
         if (other.tag == "Player") {
             FindObjectOfType<AudioManager>().PlaySound("PickUpCoin");
             PlayerManger.numberofCoins += 1;
+            Debug.Log(PlayerManger.numberofCoins);
             Destroy(gameObject);
         }
     }

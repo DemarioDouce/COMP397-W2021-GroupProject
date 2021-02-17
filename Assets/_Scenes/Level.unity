@@ -469,7 +469,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 107032686}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1234232600}
+        m_TargetAssemblyTypeName: PlayerManger, Assembly-CSharp
+        m_MethodName: LoadPlayer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &107032686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -542,8 +554,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 4.9004, y: -3}
-  m_SizeDelta: {x: 80.566, y: 23}
+  m_AnchoredPosition: {x: 4.9004, y: -3.9}
+  m_SizeDelta: {x: 128.98, y: 23}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &307571831
 MonoBehaviour:
@@ -587,6 +599,49 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 307571829}
   m_CullTransparentMesh: 1
+--- !u!1 &381074812
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 381074814}
+  - component: {fileID: 381074813}
+  m_Layer: 0
+  m_Name: DataManger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &381074813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 381074812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b32354a154c8a8e449392f3e3bf63d84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &381074814
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 381074812}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -257.63287, y: -940.1889, z: 941.3171}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &472096920
 GameObject:
   m_ObjectHideFlags: 0
@@ -1464,8 +1519,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 65.28827, y: -35.8974}
-  m_SizeDelta: {x: 110.5766, y: 51.7947}
+  m_AnchoredPosition: {x: 76.93808, y: -35.8974}
+  m_SizeDelta: {x: 133.8762, y: 51.7947}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &883782979
 MonoBehaviour:
@@ -2223,6 +2278,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13af09fb6af2eb44a9b3ff95f7aefcc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  numberofCoinsRef: 0
+  numberofLifesRef: 0
   gameOverPanel: {fileID: 6302650}
   startingText: {fileID: 1638223286}
   gameOverText: {fileID: 654921199}
@@ -2855,7 +2912,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 4.9003983, y: 23.000013}
-  m_SizeDelta: {x: 80.566, y: 25.162}
+  m_SizeDelta: {x: 128.98, y: 25.162}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1709682349
 MonoBehaviour:
@@ -3350,7 +3407,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2007054607}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1234232600}
+        m_TargetAssemblyTypeName: PlayerManger, Assembly-CSharp
+        m_MethodName: SavePlayer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2007054607
 MonoBehaviour:
   m_ObjectHideFlags: 0

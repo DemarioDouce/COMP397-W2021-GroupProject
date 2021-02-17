@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     private CharacterController controller;
 
     //Where the player is going.
-    private Vector3 direction;
+    public static Vector3 direction;
 
     //How fast the player will move forward.
     public static float forwardSpeed = 10;
