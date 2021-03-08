@@ -15,11 +15,13 @@ public class GamePlayPanel : MonoBehaviour
     //Ref to playPause Btn
     public Text playPauseBtnTxt;
 
+    //initializer the counter variable to hide the panel
+    int counter;
 
     // Start is called before the first frame update
     void Start()
     {
-        GameplayPanelBg.SetActive(false);
+        GameplayPanelBg.SetActive(true);
         ConfirmationSavePanel.SetActive(false);
         ConfirmationLoadPanel.SetActive(false);
     }
@@ -27,10 +29,10 @@ public class GamePlayPanel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (PlayerManger.isGameStarted == true)
+        //if condition to hide or show the panel
+        if (Input.GetKeyDown(KeyCode.F1))
         {
-            GameplayPanelBg.SetActive(true);
-
+            hidePanel();
         }
         if (PlayerManger.gameOver == true) {
             GameplayPanelBg.SetActive(false);
@@ -89,5 +91,14 @@ public class GamePlayPanel : MonoBehaviour
 
         ConfirmationLoadPanel.SetActive(false);
         Time.timeScale = 1;
+    }
+
+    public void hidePanel()
+    {
+        counter++;
+        if(counter % 2 == 1)
+            GameplayPanelBg.SetActive(false);
+        else
+            GameplayPanelBg.SetActive(true);
     }
 }

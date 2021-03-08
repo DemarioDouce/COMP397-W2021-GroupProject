@@ -10,8 +10,6 @@ public class PlayerData
 
     public int numberofLifes;
 
-    //Stores player position.
-  //  public float [] position;
 
     //Take in the data from our player.
     public PlayerData(PlayerManger playerManger) {
