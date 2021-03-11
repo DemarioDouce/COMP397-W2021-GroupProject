@@ -54,7 +54,7 @@ public class PlayerManger : MonoBehaviour
         numberofCoinsRef = numberofCoins;
         numberofLifesRef = numberofLifes;
         //Starts the game.
-        if (Input.GetKeyDown(KeyCode.Space)) {
+        if (Input.GetKeyDown(KeyCode.Space) || SwipeManager.tap) {
 
             isGameStarted = true;
             Destroy(startingText);
