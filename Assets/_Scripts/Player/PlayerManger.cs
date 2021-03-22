@@ -75,30 +75,33 @@ public class PlayerManger : MonoBehaviour
     public void SavePlayer()
     {
 
-        //SaveSystem.SavePlayer(this);
-        sceneData.playerPosition = player.transform.position;
-        Debug.Log("Position saved into SO = "+player.transform.position);
-        sceneData.playerCoins = numberofCoins;
-        sceneData.playerLives = numberofLifes;
+        SaveSystem.SavePlayer(this);
+
+        //Option 2
+        //sceneData.playerPosition = player.transform.position;
+        //Debug.Log("Position saved into SO = "+player.transform.position);
+        //sceneData.playerCoins = numberofCoins;
+        //sceneData.playerLives = numberofLifes;
     }
 
     public void LoadPlayer()
     {
-        int actualLife = sceneData.playerLives;
-        int actualCoins = sceneData.playerCoins;
-        Debug.Log("Position before load = "+player.transform.position);
-        player.controller.enabled = false;
-        player.transform.position = sceneData.playerPosition;
-        player.controller.enabled = true;
-        Debug.Log("Position after load = " + player.transform.position);
-
-        numberofLifes = actualLife;
-        numberofCoins = actualCoins;
-        
-
-        //old code
-        /*PlayerData data = SaveSystem.LoadPlayer();
+       
+        PlayerData data = SaveSystem.LoadPlayer();
         numberofCoins = data.numberofCoins;
-        numberofLifes = data.numberofLifes;*/
+        numberofLifes = data.numberofLifes;
+
+        //Option 2
+        //int actualLife = sceneData.playerLives;
+        //int actualCoins = sceneData.playerCoins;
+        //Debug.Log("Position before load = "+player.transform.position);
+        //player.controller.enabled = false;
+        //player.transform.position = sceneData.playerPosition;
+        //player.controller.enabled = true;
+        //Debug.Log("Position after load = " + player.transform.position);
+
+        //numberofLifes = actualLife;
+        //numberofCoins = actualCoins;
+
     }
 }
