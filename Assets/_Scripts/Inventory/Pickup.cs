@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Pickup : MonoBehaviour
 {
+    //Object Pooling Optimization Pattern
     private Inventory inventory;
     public GameObject itemButton;
 
