@@ -346,8 +346,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -223, y: 174.16}
-  m_SizeDelta: {x: 495.3337, y: 443.1149}
+  m_AnchoredPosition: {x: -2.1279, y: 0.00043106}
+  m_SizeDelta: {x: 224.53, y: 185.34}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &69041837
 MonoBehaviour:
@@ -1017,8 +1017,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -343, y: 278}
-  m_SizeDelta: {x: 150, y: 150}
+  m_AnchoredPosition: {x: 0.0012012, y: 0}
+  m_SizeDelta: {x: 171.17, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &507987238
 MonoBehaviour:
@@ -1092,8 +1092,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -69.28906, y: 63}
-  m_SizeDelta: {x: 107.5782, y: 100}
+  m_AnchoredPosition: {x: -252.5498, y: 105.67041}
+  m_SizeDelta: {x: 220.2738, y: 185.3408}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &580694309
 GameObject:
@@ -1978,8 +1978,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -343, y: 278}
-  m_SizeDelta: {x: 150, y: 150}
+  m_AnchoredPosition: {x: 0.000030518, y: 0.0000019073}
+  m_SizeDelta: {x: 133.2526, y: 119.8489}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &963672242
 MonoBehaviour:
@@ -2972,6 +2972,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13af09fb6af2eb44a9b3ff95f7aefcc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerCamera: {fileID: 0}
+  player: {fileID: 0}
+  sceneData: {fileID: 0}
   numberofCoinsRef: 0
   numberofLifesRef: 0
   gameOverPanel: {fileID: 6302650}
@@ -3249,8 +3252,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -31.7, y: 27.6}
-  m_SizeDelta: {x: 150, y: 150}
+  m_AnchoredPosition: {x: 0.000039101, y: 0.1735}
+  m_SizeDelta: {x: 171.17, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1541972275
 GameObject:
@@ -3612,6 +3615,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fad27ec009dec34449678b7720bf382e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controller: {fileID: 0}
   animator: {fileID: 772760623}
 --- !u!136 &1608553382
 CapsuleCollider:
