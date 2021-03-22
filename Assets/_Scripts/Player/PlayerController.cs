@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     //A CharacterController allows you
     //to easily do movement constrained by collisions without having to deal with a rigidbody.
-    private CharacterController controller;
+    public CharacterController controller;
 
     //Where the player is going.
     public static Vector3 direction;

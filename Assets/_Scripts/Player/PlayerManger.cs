@@ -5,6 +5,15 @@ using UnityEngine.UI;
 
 public class PlayerManger : MonoBehaviour
 {
+
+    [Header("Player Settings")]
+    public CameraController playerCamera;
+    public PlayerController player;
+
+
+    [Header("Scene Data")]
+    public SceneDataSO sceneData;
+
     //Trial ref
     public int numberofCoinsRef;
     public int numberofLifesRef;
@@ -31,6 +40,8 @@ public class PlayerManger : MonoBehaviour
         gameOver = false;
         Time.timeScale = 1;
         isGameStarted = false;
+        playerCamera = FindObjectOfType<CameraController>();
+        player = FindObjectOfType<PlayerController>();
     }
 
     // Update is called once per frame
@@ -64,20 +75,30 @@ public class PlayerManger : MonoBehaviour
     public void SavePlayer()
     {
 
-        SaveSystem.SavePlayer(this);
+        //SaveSystem.SavePlayer(this);
+        sceneData.playerPosition = player.transform.position;
+        Debug.Log("Position saved into SO = "+player.transform.position);
+        sceneData.playerCoins = numberofCoins;
+        sceneData.playerLives = numberofLifes;
     }
 
     public void LoadPlayer()
     {
+        int actualLife = sceneData.playerLives;
+        int actualCoins = sceneData.playerCoins;
+        Debug.Log("Position before load = "+player.transform.position);
+        player.controller.enabled = false;
+        player.transform.position = sceneData.playerPosition;
+        player.controller.enabled = true;
+        Debug.Log("Position after load = " + player.transform.position);
 
-        PlayerData data = SaveSystem.LoadPlayer();
+        numberofLifes = actualLife;
+        numberofCoins = actualCoins;
+        
 
+        //old code
+        /*PlayerData data = SaveSystem.LoadPlayer();
         numberofCoins = data.numberofCoins;
-        numberofLifes = data.numberofLifes;
-
-        // PlayerController.direction.x = data.position[0];
-        // PlayerController.direction.y = data.position[1];
-        //  PlayerController.direction.z = data.position[2];
-
+        numberofLifes = data.numberofLifes;*/
     }
 }
