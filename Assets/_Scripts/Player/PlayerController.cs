@@ -31,17 +31,12 @@ public class PlayerController : MonoBehaviour
     //Ref for animator.
     public Animator animator;
 
-    //Ref inventory
-    Inventory inventory;
-
     //Sliding
     private bool isSliding = false;
     //Start is called before the first frame update.
     void Start()
     {
         controller = GetComponent<CharacterController>();
-
-        inventory = new Inventory();
     }
 
     //Update is called once per frame.
