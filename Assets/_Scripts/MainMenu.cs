@@ -13,7 +13,7 @@ public class MainMenu : MonoBehaviour
     public void NewGame() { 
         SceneManager.LoadScene("Level");
         PlayerManger.numberofCoins = 0;
-        PlayerManger.numberofLifes = 6;
+        PlayerManger.numberofLifes = 3;
     }
 
     //Quit game.
