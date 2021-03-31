@@ -22,6 +22,7 @@ public class PlayerManger : MonoBehaviour
     public GameObject gameOverPanel;
     public static bool isGameStarted;
     public GameObject startingText;
+    public GameObject tutorialWindow;
     public GameObject gameOverText;
 
     //Keep track of coins
@@ -84,6 +85,7 @@ public class PlayerManger : MonoBehaviour
 
             isGameStarted = true;
             Destroy(startingText);
+            tutorialWindow.SetActive(false);
         }
 
     }
