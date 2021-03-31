@@ -16,10 +16,11 @@ public class Pickup : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.tag == "Player")
         {
             // spawn the sun button at the first available inventory slot ! 
 
+            FindObjectOfType<AudioManager>().PlaySound("PickUpCoin");
 
             for (int i = 0; i < inventory.slots.Length; i++)
             {
