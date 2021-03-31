@@ -33,6 +33,8 @@ public class PlayerManger : MonoBehaviour
     public static int numberofLifes = 3;
     //Ref of the text for life
     public Text lifeText;
+    //Quest
+    public Quest quest;
 
     // Start is called before the first frame update
     void Start()
@@ -54,6 +56,19 @@ public class PlayerManger : MonoBehaviour
             Time.timeScale = 0;
             gameOverPanel.SetActive(true);
         }
+        //
+        if (quest.isActive)
+        {
+
+            quest.goal.CoinCollected();
+            if (quest.goal.IsReached()) {
+
+                numberofCoins += quest.coinReward;
+                quest.Complete();
+            
+            }
+
+        }
 
         //Keep track of the coin count.
         coinsText.text = "Coins: " +numberofCoins;
@@ -70,6 +85,7 @@ public class PlayerManger : MonoBehaviour
             isGameStarted = true;
             Destroy(startingText);
         }
+
     }
 
     public void SavePlayer()
