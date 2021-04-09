@@ -1263,7 +1263,7 @@ Camera:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 8400000, guid: 713b7b250a350704cb860c3d9f309a72, type: 2}
+  m_TargetTexture: {fileID: 8400000, guid: 220a9b116337e0849bc0a6255578484e, type: 2}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
@@ -4058,7 +4058,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0.000039101, y: 0.000024557}
-  m_SizeDelta: {x: 355.5914, y: 354.9661}
+  m_SizeDelta: {x: 355, y: 355}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1472868397
 MonoBehaviour:
@@ -4080,7 +4080,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 8400000, guid: 713b7b250a350704cb860c3d9f309a72, type: 2}
+  m_Texture: {fileID: 8400000, guid: 220a9b116337e0849bc0a6255578484e, type: 2}
   m_UVRect:
     serializedVersion: 2
     x: 0
